@@ -1,10 +1,14 @@
+//CdS Cell 光りセンサ　片方の足に10kΩの抵抗をはんだづけして、Arduino５Vポートに接続、同じ足にA0ポートに接続する電線をはんだづけ　片方はGNDにつなげる　Arduino　A0,GND,5Vに接続
+//WS2812B　LEDテープ　Arduino　5V-LED 5V ,Arduino D2-LED DIN, Arduino GND-LED GNDに接続する　LEDテープの方向注意
+//アンテナ用粒LED Arduino D4-LED プラスの足,Arduino　GND-LED マイナスの足に接続する
+
 #include <FastLED.h>
 
 #define LED_PIN_WS2812B     2      // WS2812B LEDのデータピン
 #define NUM_LEDS_WS2812B    9      // WS2812B LEDの数
 #define LED_PIN_LED         4      // 粒LEDのデータピン
 
-#define LED_TYPE_WS2812B    WS2812B
+#define LED_TYPE_WS2812B   WS2812B
 #define COLOR_ORDER_WS2812B GRB
 
 CRGB leds[NUM_LEDS_WS2812B];
